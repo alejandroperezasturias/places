@@ -10,6 +10,8 @@ const submitBottom = document.querySelector(".submit-btn");
 const categoryButtons = document.querySelectorAll(".category");
 const iTag = document.querySelector("i");
 const moreButtonGeneral = document.querySelector(".more");
+let titleName = document.querySelector(".title");
+let titleNameList = titleName.textContent.split("");
 let focusMap;
 let searchValue = "Prague";
 let currentMarkers = [];
@@ -20,7 +22,16 @@ let activePointer = [];
 let offsetValue = 4;
 let sectionSearch = "food";
 
-// Event Listener
+// Logo Name Animation
+
+titleName.innerHTML = "";
+titleNameList.forEach((letter) => {
+  titleName.innerHTML += "<span>" + letter + "</span>";
+});
+let ticker = 0;
+let timer = setInterval(onTick, 20);
+
+// Event Listeners
 
 input.addEventListener("input", function (e) {
   searchValue = e.target.value;
@@ -85,8 +96,26 @@ var map = new mapboxgl.Map({
 map.on("dataloading", () => {
   map.resize();
 });
+
 // Functions
 
+// Logo animation
+function onTick() {
+  const span = titleName.querySelectorAll("span")[ticker];
+  span.classList.add("fade");
+  ticker++;
+  if (ticker === titleNameList.length) {
+    stopInterval();
+  }
+}
+
+function stopInterval() {
+  clearInterval(timer);
+  timer = null;
+  return;
+}
+
+// Main API Call
 async function apiCall(x, section = "food") {
   const dataFetch = await fetch(
     `https://api.foursquare.com/v2/venues/explore?near=${x}
