@@ -29,7 +29,7 @@ titleNameList.forEach((letter) => {
   titleName.innerHTML += "<span>" + letter + "</span>";
 });
 let ticker = 0;
-let timer = setInterval(onTick, 20);
+let timer = setInterval(onTick, 50);
 
 // Event Listeners
 
