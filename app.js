@@ -42,13 +42,17 @@ submitBottom.addEventListener("click", searchforValueandSection);
 
 // Making The Search Bar Prettier
 submitBottom.addEventListener("mouseover", function () {
-  input.classList.add("input-change-background-color");
-  iTag.classList.add("move-i");
+  if (window.screen.width > 890) {
+    input.classList.add("input-change-background-color");
+    iTag.classList.add("move-i");
+  }
 });
 
 submitBottom.addEventListener("mouseout", function () {
-  input.classList.remove("input-change-background-color");
-  iTag.classList.remove("move-i");
+  if (window.screen.width > 890) {
+    input.classList.remove("input-change-background-color");
+    iTag.classList.remove("move-i");
+  }
 });
 
 // Chosing the categories

@@ -348,14 +348,26 @@ footer {
 }
 
 @media screen and (max-width: 890px) {
+  form {
+    select,
+    textarea,
+    input {
+      font-size: 16px;
+    }
+    button {
+      &:hover {
+        background: #444344;
+        color: rgb(255, 255, 255);
+        outline: none;
+      }
+    }
+  }
+
   header {
     .logo {
       align-items: center;
       justify-content: center;
     }
-  }
-  .list {
-    margin-top: 2rem;
   }
   #map {
     height: 50rem;
@@ -366,10 +378,58 @@ footer {
       justify-content: center;
       text-align: center;
       h2 {
-        flex: 1 1 40rem;
+        // flex: 1 1 40rem;
         font-size: 1.2rem;
         font-weight: 500;
         text-align: center;
+        padding-top: 1rem;
+      }
+      li {
+        flex-basis: 19rem;
+        padding: 0.6rem;
+      }
+    }
+  }
+  // Fix hovers
+  button {
+    &:hover {
+      background: #43dde6;
+      color: rgb(255, 255, 255);
+      outline: none;
+    }
+  }
+  .list {
+    margin-top: 2.6rem;
+    .more {
+      &:hover {
+        background: #62d7dd;
+        color: #ffffff;
+      }
+    }
+  }
+  .category-wrapper {
+    .category {
+      &:hover {
+        background: #d3d3d3;
+        color: #000000;
+      }
+      &:active {
+        background: #364f6b;
+        color: whitesmoke;
+      }
+    }
+  }
+  .list-places {
+    .places {
+      button {
+        &:hover {
+          background: #fd7da4;
+          color: #ffffff;
+        }
+        &:active {
+          background: #364f6b;
+          color: rgb(243, 243, 243);
+        }
       }
     }
   }
