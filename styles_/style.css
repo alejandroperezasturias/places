@@ -486,6 +486,7 @@ footer .footer-wrapper ul li {
   form textarea,
   form input {
     font-size: 16px;
+    outline: none;
   }
   form button:hover {
     background: #444344;
@@ -499,6 +500,9 @@ footer .footer-wrapper ul li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  header .title {
+    color: #3e3e3e;
   }
   #map {
     height: 50rem;
@@ -538,10 +542,6 @@ footer .footer-wrapper ul li {
   .category-wrapper .category:hover {
     background: #d3d3d3;
     color: #000000;
-  }
-  .category-wrapper .category:active {
-    background: #364f6b;
-    color: whitesmoke;
   }
   .list-places .places button:hover {
     background: #fd7da4;

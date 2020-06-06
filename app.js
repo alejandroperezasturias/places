@@ -105,11 +105,13 @@ map.on("dataloading", () => {
 
 // Logo animation
 function onTick() {
-  const span = titleName.querySelectorAll("span")[ticker];
-  span.classList.add("fade");
-  ticker++;
-  if (ticker === titleNameList.length) {
-    stopInterval();
+  if (window.screen.width > 890) {
+    const span = titleName.querySelectorAll("span")[ticker];
+    span.classList.add("fade");
+    ticker++;
+    if (ticker === titleNameList.length) {
+      stopInterval();
+    }
   }
 }
 
