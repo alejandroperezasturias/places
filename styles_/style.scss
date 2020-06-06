@@ -367,9 +367,12 @@ footer {
     .logo {
       align-items: center;
       justify-content: center;
-    }
-    .title {
-      color: #3e3e3e;
+      span {
+        color: #3e3e3e;
+      }
+      .title {
+        color: #3e3e3e;
+      }
     }
   }
   #map {

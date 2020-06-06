@@ -501,7 +501,10 @@ footer .footer-wrapper ul li {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  header .title {
+  header .logo span {
+    color: #3e3e3e;
+  }
+  header .logo .title {
     color: #3e3e3e;
   }
   #map {
